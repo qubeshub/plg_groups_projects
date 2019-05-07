@@ -69,7 +69,7 @@ switch ($this->which)
 						<?php } ?>
 					</td>
 					<td class="th_privacy">
-						<?php if (!$row->isPublic()) { echo '<span class="privacy-icon">&nbsp;</span>' ; } ?>
+						<?php if (!$row->isPublic()) { echo '<span class="privacy-icon">&nbsp;</span>'; } ?>
 					</td>
 					<td class="th_title">
 						<?php if ($row->access('member') || $row->access('readonly')) { ?>
@@ -140,10 +140,10 @@ switch ($this->which)
 									<a href="<?php echo $link; ?>" class="btn btn-success" disabled><?php echo Lang::txt('PLG_GROUPS_PROJECTS_REQUEST_DENIED') ;?></a>
 								</div>
 							<?php else: ?>
-								<?php echo ($row->get('sync_group') ? '<span class="synced">' . Lang::txt('PLG_GROUPS_PROJECTS_GROUP_SYNCED') . '</span>' : '<span class="selected">' . Lang::txt('PLG_GROUPS_PROJECTS_GROUP_SELECTED') . '</span>'); ?>
+								<?php echo ($row->get('sync_group')) ? '<span class="synced">' . Lang::txt('PLG_GROUPS_PROJECTS_GROUP_SYNCED') . '</span>' : '<span class="selected">' . Lang::txt('PLG_GROUPS_PROJECTS_GROUP_SELECTED') . '</span>'; ?>
 							<?php endif; ?>
 						<?php else: ?>
-							<?php echo ($row->get('sync_group') ? '<span class="synced">' . Lang::txt('PLG_GROUPS_PROJECTS_GROUP_SYNCED') . '</span>' : '<span class="selected">' . Lang::txt('PLG_GROUPS_PROJECTS_GROUP_SELECTED') . '</span>'); ?>
+							<?php echo ($row->get('sync_group')) ? '<span class="synced">' . Lang::txt('PLG_GROUPS_PROJECTS_GROUP_SYNCED') . '</span>' : '<span class="selected">' . Lang::txt('PLG_GROUPS_PROJECTS_GROUP_SELECTED') . '</span>'; ?>
 						<?php endif; ?>
 					</td>
 				</tr>
